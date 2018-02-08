@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>About Data Structures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+
+<header>
+  <img class = "logo" src="https://www-origin.campusexplorer.com/media/126x126/California_State_University_Monterey_Bay-logo-3CF42DD4.png" alt="csumb logo">
+  <h1>About Data Structures</h1>
+
+</header>
+
+
+<ul>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href= "arrays.html">Arrays/Vectors</a>
+  </li>
+  <li>
+    <a href = "lists.html">Linked Lists</a>
+  </li>
+  <li>
+    <a class = "current" href= "trees.html">Maps</a>
+  </li>
+</ul>
+
+  <main>
+    <article>
+      <h2>What's a HashMap?</h2>
+      <p class = "info">
+        <img style= "float: left;" src="https://i.stack.imgur.com/x9H11.png" alt="linked list">
+        In order to place information into a hashmap, two pieces are needed - the information itself and a key.
+        An example would be <strong> ("cat", 'c') </strong>. "Cat" is the information we want to store. The letter 'c' is our key.
+        The key has to be passed to what's known as a <em>hash function</em>. All hash functions must return a single positive integer value, regardless of
+        the key. This function has to be repeatable for the same key but different enough for similar keys. This integer represents the address of that piece of information.
+        <br />
+        For example, if our keys were words, two similar words should return different values. "cat" and "act" should not map to the same address.
+        However, there's no guarantee that a key will map to an empty address. This is known as a <strong>collision</strong>.
+      </p>
+
+      <h2>Open Addressing</h2>
+      <p class = "info">
+        Collisions occur when two pieces of data map to the same address. In open addressing, the data will look for the next empty and available spot in the array.
+        It will loop back around if it reaches the end of the array.
+      </p>
+      <h2>Chain Hashing</h2>
+      <p class = "info">
+      In chain hashing, two pieces of data with the same key will indeed get mapped to the same address.
+      The difference here is that new data coming in will get appended to the list at that specific address.
+      </p>
+
+      <h2>Cuckoo Hashing</h2>
+      <p class = "info">
+        In this method, there can be 2 or more hash functions. It will use the first hash function for element lookup. In the case of a collision, it will use one of the other hash functions.
+        If all hash functions are used and there is still a collision, then the key it collided with is removed to make space for the new key,
+        and the old key is re-hashed with one of the other hash functions, which maps it to another address.
+        If that location also results in a collision, then the process repeats until there is no collision or the process traverses all the buckets, at which point the table is resized.
+        <br><br>
+        source:
+        <a href="https://en.wikipedia.org/wiki/Hash_table#Collision_resolution">Wikipedia</a>
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    &copy;Luis Valencia 2018
+  </footer>
+</body>
+
+</html>

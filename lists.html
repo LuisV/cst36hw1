@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>About Data Structures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+<header>
+  <img class = "logo" src="https://www-origin.campusexplorer.com/media/126x126/California_State_University_Monterey_Bay-logo-3CF42DD4.png" alt="csumb logo">
+  <h1>About Data Structures</h1>
+</header>
+
+<ul>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href= "arrays.html">Arrays/Vectors</a>
+  </li>
+  <li>
+    <a class = "current" href = "lists.html">Linked Lists</a>
+  </li>
+  <li>
+    <a href= "trees.html">Maps</a>
+  </li>
+</ul>
+
+  <main>
+    <article>
+      <h2>What's a node?</h2>
+      <img style ="margin-top: 10px; width: 100%;" src="http://2.bp.blogspot.com/-GZQchlevd7c/T9xl7Sj12hI/AAAAAAAAAGs/c-Yj9YEb1TQ/s1600/linkedlist.png" alt="linked list">
+      <p class = "info">
+      A node is a specific data structure. It consists of two parts, the data itself, and the link to the next node.
+      By chaining and pointing one node to the next, a programmer can create what's known as a linked list. This allows data to be arranged more freely than with a traditional array.
+      <br/>
+      Since everything is linked together, the linked list has constant inserting and deleting capablities - Links can be reassigned without needing to shift things over.
+      However, lookup time is linear. You would need to traverse X number of nodes to get to the one you need.
+      </p>
+<br /><br />
+      <h2>What can you do with a node?</h2>
+      <h2>Trees</h2>
+      <p class = "info">
+        <img style= "float: right;" src="http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/treeLink1.gif" alt="binary search tree">
+        Nodes can be linked in such a way that it creates a structure that resembles tree branches. These trees can be either <strong>binary tress or binary search trees</strong>.
+        In binary search trees, the left node if always smaller than the right. This does not apply in regular binary trees though. Traversal though a tree is normally done recursively.
+        There are three ways established ways to "visit" each node: Pre-Order, In-Order, and Post-Order.
+
+
+      </p>
+      <h2>Heaps</h2>
+      <p class= "info">
+        Heaps are essetially trees with a very distinct specific rule. The nodes near the top, or the parent nodes, are always bigger than the child. This is known as a max heap.
+        The reverse is true in a min heap. Heaps are especially useful
+      </p>
+      <br /> <br/>
+      </article>
+  </main>
+
+<footer>
+  &copy;Luis Valencia 2018
+</footer>
+</body>
+</html>
