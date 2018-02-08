@@ -19,7 +19,7 @@
 
 <ul>
   <li>
-    <a class = "current" href="">Home</a>
+    <a class = "current" >Home</a>
   </li>
   <li>
     <a href= "arrays.html">Arrays/Vectors</a>
